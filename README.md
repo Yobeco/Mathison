@@ -1,2 +1,2 @@
 # mathison
-Aplicación educativa que muestra flechas en la pizarra al ritmo de la música de Madison. Para enseñar movimientos geométricos a una clase de CE1.
+Educational application that displays arrows on the board to Madison music. To teach geometric displacements to a class of second graders.
