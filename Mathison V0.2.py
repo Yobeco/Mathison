@@ -18,6 +18,8 @@ pygame.mixer.init()
 # Charger le fichier
 pygame.mixer.music.load("Medias/Madison.mp3")
 
+change = pygame.mixer.Sound("Medias/Change.mp3")
+
 def playOrPauseMusic():
     
     # Aller chercher l'indicateur d'état
@@ -46,14 +48,19 @@ def playOrPauseMusic():
 
 def stopMusic():
     global music_state
+    global img
     pygame.mixer.music.stop()
     music_state = "Stoped"
     print(music_state)
     play_bouton.config(text="Play")
+    img = ImageTk.PhotoImage(file="Medias/LogoMathison.png")
+    label.config(image=img)
 
 # Définition des fonctions associées aux touches : changement de l'image
 
 def imgUp(event):
+    # Jouer un son au changement
+    change.play()
     global img
     global color
     if color == True:
@@ -65,6 +72,7 @@ def imgUp(event):
     label.config(image=img)
 
 def imgDown(event):
+    change.play()
     global img
     global color
     if color == True:
@@ -76,6 +84,7 @@ def imgDown(event):
     label.config(image=img)
 
 def imgLeft(event):
+    change.play()
     global img
     global color
     if color == True:
@@ -87,6 +96,7 @@ def imgLeft(event):
     label.config(image=img)
 
 def imgRight(event):
+    change.play()
     global img
     global color
     if color == True:
